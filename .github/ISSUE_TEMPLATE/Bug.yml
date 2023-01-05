@@ -1,0 +1,67 @@
+name: "Bug Report"
+description: "Création d'un ticket de bug"
+title: "[BUG] - <title>"
+labels: [
+  "bug"
+]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description"
+      description: Décriver explicitement votre problème
+      placeholder: Description cours et explicite du problème
+    validations:
+      required: true
+  - type: input
+    id: reprod-url
+    attributes:
+      label: "Reproduction URL"
+      description: Indiquer votre URL du répertoire GitHub reproduissant le problème
+      placeholder: ex. https://github.com/USERNAME/REPO-NAME
+    validations:
+      required: false
+  - type: textarea
+    id: reprod
+    attributes:
+      label: "Etape de reproduction "
+      description: Décriver comment reproduire le problème
+      value: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+      render: bash
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: "Screenshots"
+      description: Si possible, envoyer des screenshots pour illuster le problème et vos explication
+      value: |
+        ![DESCRIPTION](LINK.png)
+      render: bash
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Logs"
+      description: Copier-coller les logs du problèmes
+      render: bash
+    validations:
+      required: false
+  - type: dropdown
+    id: os
+    attributes:
+      label: "OS"
+      description: Quel OS est impacté ?
+      multiple: true
+      options:
+        - Windows
+        - Linux
+        - Mac
+        - Andoid
+    validations:
+      required: true
