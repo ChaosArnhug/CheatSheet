@@ -1,0 +1,55 @@
+name: "Suggestion de fonctionnalité"
+description: Crée un ticket pour suggérer une nouvelle fonctionnalité
+title: "💡 [SUGGESTION] - <title>"
+labels: [
+  "suggestion"
+]
+body:
+  - type: textarea
+    id: implementation_pr
+    attributes:
+      label: "Implémentation PR"
+      description: Pull requets de la suggestion
+      placeholder: "#Pull Request ID"
+    validations:
+      required: false
+  - type: textarea
+    id: reference_issues
+    attributes:
+      label: "Problème de référence"
+      description: Issue de la suggestion
+      placeholder: "#Issues IDs"
+    validations:
+      required: false
+  - type: textarea
+    id: summary
+    attributes:
+      label: "Résumé"
+      description: Résumé brievement votre suggestion
+      placeholder: Description en quelques lignes
+    validations:
+      required: true
+  - type: textarea
+    id: basic_example
+    attributes:
+      label: "Exemple"
+      description: Illustrer votre suggestion par des exemples basiques
+      placeholder: Ecriver vos exemples
+    validations:
+      required: true
+  - type: textarea
+    id: drawbacks
+    attributes:
+      label: "Impacte"
+      description: Quel est l'impacte de votre suggestion sur l'application
+      placeholder: Identifier le(s) impacts de votre suggestion en étant neutre
+    validations:
+      required: true
+  - type: textarea
+    id: autres
+    attributes:
+      label: "Autres"
+      description: Ecriver ici des infos non abordés utiles
+      placeholder: Informations
+    validations:
+      required: false
